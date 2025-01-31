@@ -9,7 +9,7 @@ CORS(app)
 def index():
     data = {
             'email': 'jeffrey.ogechi@gmail.com',
-            'current_datetime':datetime.now().isoformat(),
+            'current_datetime':datetime.utcnow().isoformat() + "Z",
             'github_url':'https://github.com/Jeffrey7890/HNG_task_zero'
             }
     return jsonify(data)
